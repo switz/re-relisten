@@ -1,6 +1,11 @@
 <h3 class="list-header">SHOWS</h3>
 <ul>
   {{#each shows}}
-    <li><a href="{{../artist}}/{{year}}/{{month}}/{{day}}">{{month}}/{{day}} {{venue_name}}</a></li>
+    <li>
+      <a href="{{../artist}}/{{year}}/{{month}}/{{day}}">
+        <span class="date">{{month}}/{{addZero day}}</span>
+        <span class="subtitle">{{venue_name}}</span>
+      </a>
+    </li>
   {{/each}}
 </ul>

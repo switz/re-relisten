@@ -26,3 +26,5 @@ register 'without', (context, options) ->
 # Get Chaplin-declared named routes. {{url "likes#show" "105"}}
 register 'url', (routeName, params..., options) ->
   utils.reverse routeName, params
+
+register 'addZero', utils.addZero
