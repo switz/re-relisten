@@ -20,6 +20,8 @@ module.exports = class HomeController extends Controller
     artistModel ||= new ArtistModel()
     @reuse 'header', HeaderView, region: 'header'
 
+    @reuse 'homepage', HomePageView, region: 'main'
+
     @reuse 'artists', ArtistsView, region: 'artists', artist: artistModel
 
     @reuse 'years', YearsView, region: 'years' , artist: artistModel
