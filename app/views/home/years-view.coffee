@@ -1,4 +1,4 @@
-View = require 'views/base/view'
+View = require './flex-list-view'
 YearsModel = require 'models/years'
 
 module.exports = class YearsView extends View
@@ -11,10 +11,11 @@ module.exports = class YearsView extends View
     @artist = options.artist
     @model = new YearsModel()
     @listenTo @artist, 'change:artist', @updateArtist
+    @listenTo @artist, 'change:year', @updateYear
     super
   updateArtist: (model, slug) =>
-    return if @previousArtist == slug
-
-    @previousArtist = slug
     @model.set('artist', slug)
           .fetch()
+
+  updateYear: (model, year) ->
+    @$(".year-#{year}").addClass('active')

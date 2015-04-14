@@ -1,4 +1,4 @@
-View = require 'views/base/view'
+View = require './flex-list-view'
 TapesModel = require 'models/tapes'
 
 module.exports = class TapesView extends View
@@ -10,7 +10,6 @@ module.exports = class TapesView extends View
   initialize: (options) ->
     @artist = options.artist
     @listenTo @artist, 'change:day', @updateShow
-    @model = new TapesModel()
     super
   updateShow: (model, year) ->
     @model.set(@artist.toJSON())

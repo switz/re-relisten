@@ -2,7 +2,7 @@
 <ul>
   {{#each shows}}
     <li>
-      <a href="{{../artist}}/{{year}}/{{month}}/{{day}}">
+      <a href="{{../artist}}/{{year}}/{{month}}/{{day}}" class="show-{{month}}-{{day}}">
         <span class="date">{{month}}/{{addZero day}}</span>
         <span class="subtitle">{{venue_name}}</span>
       </a>

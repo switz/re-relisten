@@ -1,3 +1,6 @@
+HomeController = require 'controllers/home-controller'
+routes = require 'routes'
+
 # The application object.
 module.exports = class Application extends Chaplin.Application
   # start: ->

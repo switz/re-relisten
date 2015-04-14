@@ -5,3 +5,6 @@ module.exports = class Controller extends Chaplin.Controller
   # You may also persist models etc.
   beforeAction: ->
     @reuse 'site', SiteView
+    @reuse 'home', ->
+      HomeController = require 'controllers/home-controller'
+      @controller = new HomeController()

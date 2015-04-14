@@ -7,4 +7,9 @@ module.exports = class SiteView extends View
   regions:
     header: '#header-container'
     main: '#page-container'
+    artists: '#artists-list'
+    years: '#years-list'
+    shows: '#shows-list'
+    tapes: '#tapes-list'
+    info: '#info-list'
   template: require './templates/site'
